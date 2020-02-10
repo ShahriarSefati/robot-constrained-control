@@ -19,14 +19,6 @@ In addition, if you wish to use the visualization capabilities, you need to [ins
 
 The above files should be found in the CoppeliaSim's installation directory, under _programming/remoteApiBindings/python_.
 
-Example
--------
-
-After installing all the dependencies, you can run the example code ('cmc\_example.py') by running:
-* python cmc\_example.py
-
-This example instructs you on how you can initialize the robotic system configuration, add the desired constriants and the set of desired target points for motion control.
-
 Virtual Fixtures
 ----------------
 Currently, the following virtual fixtures can be added to the controller in the form of constraints:
@@ -37,3 +29,15 @@ Currently, the following virtual fixtures can be added to the controller in the 
 * End-effector axis range limit
 * Allowable (forbidden) regions defined by hyper-planes
 
+Running Example
+---------------
+
+The example provided in this repository ('cmc\_example.py') instructs you on how you can initialize the robotic system configuration, add the desired constriants and the set of desired target points for motion control. After installing all the dependencies, you can run the example code by:
+
+1. Start CoppeliaSim by running coppeliaSim.sh in the installation directory.
+2. In the simulation, under the 'File' tab, click on 'Open Scene ...'.
+3. Load 'simulation\_example.ttt' scene provided in this repository under the 'simulation' folder.
+4. Hit play button in simulation.
+5. Now run: python cmc\_example.py
+
+If everything is successful, the robot in the simulation starts moving to the specified target points while satisfying all constraints (joing position and velocity limits, RCM, end-effector axis range limit, and two hyper-plane virtual fixtures).
